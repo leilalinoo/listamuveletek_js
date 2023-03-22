@@ -2,17 +2,17 @@ import { SZAMLISTA, SZOVEGLISTA } from "./adat.js";
 //console.log(SZAMLISTA);
 
 $(function () {
-  /*let kevertIndexLista = keveres1(SZAMLISTA);
+  let kevertIndexLista = keveres1(SZAMLISTA);
   console.log(kevertIndexLista);
-  for (let index = 0; index < array.length; index++) {
+/*   for (let index = 0; index < array.length; index++) {
     console.log(
       SZAMLISTA[index],
       kevertIndexLista[index],
       SZAMLISTA[kevertIndexLista[index]]
     );
-  }*/
+  } */
 
-  console.log(SZOVEGLISTA);
+  /*console.log(SZOVEGLISTA);
   rendezes1(SZOVEGLISTA);
   console.log(SZOVEGLISTA);
 
@@ -23,7 +23,7 @@ $(function () {
   console.log("SZÁMOK RENDEZÉSE RANDOMMAL:");
   console.log(SZAMLISTA);
   keveres2(SZAMLISTA);
-  console.log(SZAMLISTA);
+  console.log(SZAMLISTA);*/
 
 });
 
@@ -33,17 +33,16 @@ function keveres1(lista) {
   while (megKevertIndex.length < lista.length) {
     szamok = Math.floor(Math.random() * lista.length);
     let index = 0;
-    while (
-      index < megKevertIndex.length &&
-      !(szamok == megKevertIndex[index])
-    ) {
+    while (      index < megKevertIndex.length &&       !(szamok == megKevertIndex[index])    ) 
+    {
       index++;
+      console.log(index);
     }
     if (index >= megKevertIndex) {
       megKevertIndex.push(szamok);
     }
   }
-  console.log(megKevertIndex.length);
+  
   return megKevertIndex;
 }
 
